@@ -1,0 +1,60 @@
+SETS    ▶ In tennis, matches are divided into sets and games.
+	▶ In women tennis (our dataset will come from women tennis
+	data), a player that wins 2 set out of 3 wins the match.
+	▶ If the same player wins the first two sets than the game
+	finishes and the third set is not required to be played.
+GAMES 	▶ Each set is divided into smaller parts called games.
+	▶ The first player that wins 6 games in a set, wins the set.
+	▶ If the score is 5-5 in a set, same player must win two more
+	games to win the set with the score of 7-5.
+	▶ If the games are shared between players and the score is 6-6
+	then a special game called tie-break is played to determine the
+	set winner.
+TIE BREAK ▶ If the score is 6-6 in a set then a special game called tie break
+	is played over 7 points.
+	▶ Every single score in a tie break game is called as point and
+	the first player that reaches 7 points and has two more points
+	than the opponent wins the tie break hence the set.
+	▶ If the players are tied at 6-6 at the tie break, one of the players
+	has to get two consecutive points to win the tie break and the
+	set.
+	▶ tourney_id: a unique id of the tournament, id is unique for each year for
+	the same tournament, but notice that there is a pattern in naming.
+	▶ tourney_name: name of the tournament, notice that level of the
+	tournament is also provided at the beginning. For example, W10
+	Tiemcen, W35 Bangkok and G Roland Garros denote the tournament
+	Tiemcen, Bangkok and Roland Garros with the tournament levels 10, 35
+	and Grand Slam respectively.
+	▶ tourney_start_date: Start date of the tournament
+	▶ surface: surface of the tournament: One of ’Clay’, ’Grass’, ’Carpet’,
+	’Hard’.
+	▶ match_num: match number of the match in a tournament.
+	▶ round: round of the match in the tournament. While some players play
+	qualification round, some players start the tournament directly from the
+	main table.
+	Round of Q1, Q2, Q3 denotes first, second and third qualification round
+	respectively.
+	R128, R64, R32, R16 denotes round of 128, 64, 32 and 16 respectively.
+	QF, SF and F denotes quarter finals, semi finals and finals respectively.
+	▶ score: Match score is given by separating each set with space and separating
+	each player score with a dash (-). If a tie break is played in a set, the number of
+	points won by the loser is denoted within parenthesis.
+	For example:
+	6-1 6-4 The game is finished in two sets the winner wins a total of 12 games
+	while loser wins a total of 5 games.
+	7-5 6-2 The game is finished in two sets the winner wins a total of 13 games
+	while loser wins a total of 7 games.
+	4-6 6-2 7-5 The game is finished in three sets the winner wins a total of 17
+	games while loser wins a total of 13 games.
+	6-2 3-6 7-5 The game is finished in three sets the winner wins a total of 16
+	games while loser wins a total of 13 games.
+	4-6 7-6(2) 6-2 The game is finished in three sets. Second set went to the tie
+	break and the winner wins the tie break with 7-2. The value in the parenthesis
+	denotes the number of points won by the loser in the tie break.
+	▶ player_id: a unique player id
+	▶ Full_Name: Name and Surname of the players.
+	▶ win_loss: Did the player win or loss the match? Takes the values of ’winner’ or
+	’loser’.
+	▶ player_rank: world ranking of the player at the time the match is played.
+	▶ dateofbirth: birth date of the player
+	▶ country: country of the player
